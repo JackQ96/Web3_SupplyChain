@@ -177,13 +177,13 @@ contract SupplyChain is
   {
     // Add the new item as part of Harvest
         items[_upc].upc = _upc;
-        items[_upc].ownerID = msg.sender;
-        items[_upc].originFarmerID = originFarmerID;
-        items[_upc].originFarmName = originFarmName;
-        items[_upc].originFarmInformation = originFarmInformation;
-        items[_upc].originFarmLatitude = originFarmLatitude;
-        items[_upc].originFarmLongitude = originFarmLongitude;
-        items[_upc].productNotes = productNotes;
+        items[_upc].ownerID = _originFarmerID;
+        items[_upc].originFarmerID = _originFarmerID;
+        items[_upc].originFarmName = _originFarmName;
+        items[_upc].originFarmInformation = _originFarmInformation;
+        items[_upc].originFarmLatitude = _originFarmLatitude;
+        items[_upc].originFarmLongitude = _originFarmLongitude;
+        items[_upc].productNotes = _productNotes;
         items[_upc].sku = sku;
 
     // Increment sku
@@ -255,7 +255,7 @@ contract SupplyChain is
     // Transfer money to farmer
         items[_upc].originFarmerID.transfer(items[_upc].productPrice);
     // emit the appropriate event
-        emit Sold(_upc)
+        emit Sold(_upc);
     
   }
 
