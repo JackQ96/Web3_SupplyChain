@@ -185,6 +185,7 @@ contract SupplyChain is
         items[_upc].originFarmLongitude = _originFarmLongitude;
         items[_upc].productNotes = _productNotes;
         items[_upc].sku = sku;
+        items[_upc].productID = sku + _upc;
 
     // Increment sku
         sku = sku + 1;
@@ -194,7 +195,7 @@ contract SupplyChain is
   }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
-  function processItem(uint _upc) public harvested(_upc) onlyFarmer
+  function processItem(uint _upc) public harvested(_upc)
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifier to verify caller of this function
