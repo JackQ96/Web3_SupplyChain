@@ -195,7 +195,7 @@ contract SupplyChain is
   }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
-  function processItem(uint _upc) public harvested(_upc)
+  function processItem(uint _upc) public harvested(_upc) verifyCaller(items[_upc].originFarmerID) onlyFarmer
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifier to verify caller of this function
@@ -211,7 +211,7 @@ contract SupplyChain is
   }
 
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
-  function packItem(uint _upc) public processed(_upc) onlyFarmer
+  function packItem(uint _upc) public processed(_upc) verifyCaller(items[_upc].originFarmerID) onlyFarmer
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifier to verify caller of this function
