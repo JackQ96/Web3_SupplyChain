@@ -16,4 +16,4 @@ https://rinkeby.etherscan.io/tx/0x765ee946bd03e02153493faae3a4eb48c31669c1ffce8d
 
 <h3> UML Diagrmas </h3>
 
-(UML)
+[Click here to view UML Diagrams](Web3_SupplyChain/UML)
