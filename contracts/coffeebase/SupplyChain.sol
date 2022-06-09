@@ -14,7 +14,7 @@ contract SupplyChain is
     ConsumerRole,
     DistributorRole,
     FarmerRole,
-    RetailerRole.
+    RetailerRole,
     Ownable {
 
   // Define 'owner'
