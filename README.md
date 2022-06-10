@@ -1,5 +1,9 @@
 <h1> Coffee Farm Supply Chain </h1>
 
+(Project created for the Udacity Blockchain Nano Degree Assesment) <br>
+
+This dApp follows the supply chain of a coffee farm through its life cycle. At each stage only the correct stakeholder can update the current state of the supplychain and transfer funds if needed. The smart contracts have 100% test coverage and they were then migrated to Rinkeby test net to simulate production.
+
 <h2> Instructions to run code </h2>
 
 > The code is written for **Solidity v0.4.24**. At the time of writing, the current Truffle v5 comes with Solidity v0.5 that requires function *mutability* and *visibility* to be specified (please refer to Solidity [documentation](https://docs.soliditylang.org/en/v0.5.0/050-breaking-changes.html) for more details). To use this code, please run `npm i -g truffle@4.1.14` to install Truffle v4 with Solidity v0.4.24.
